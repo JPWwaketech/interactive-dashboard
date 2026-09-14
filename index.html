@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <title>My Interactive Dashboard</title>
 
-    <!-- Bootstrap CSS should come FIRST -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
           crossorigin="anonymous">
 
-    <!-- Your custom CSS must come AFTER Bootstrap -->
     <style>
         body {
             background-color: #f0f8ff;
@@ -20,14 +18,40 @@
         h1 {
             color: #003366;
         }
+
+        #weekly-tasks {
+            background: #eef6ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #weekly-tasks input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        #goal-btn {
+            padding: 10px;
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #goal-btn:hover {
+            background: #001f40;
+        }
+
+        #goal-message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
     </style>
 
-    <!-- JavaScript should come after CSS -->
-    <script defer>
-        window.alert("The JavaScript code is working!");
-    </script>
-
-    <!-- Bootstrap JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
             crossorigin="anonymous"></script>
@@ -38,15 +62,27 @@
 
     <p>This dashboard was created by Parker for the WEB-115 course at Wake Tech.</p>
 
-    <script>
-        document.write("This dashboard demonstrates how JavaScript can be used to create interactive websites.");
-    </script>
-
     <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
 
     <div class="container">
         <div class="row">
-            <!-- Future content goes here -->
+
+            <div class="col" id="weekly-tasks">
+
+                <script src="js/task-manager.js"></script>
+
+                <form id="task-form">
+                    <input type="text" id="user-name" placeholder="Enter your name" required>
+                    <input type="number" id="daily-goal" placeholder="Daily Task Goal" required>
+                    <input type="number" id="bonus-tasks" placeholder="Weekly Bonus Tasks" required>
+
+                    <button id="goal-btn">Calculate Weekly Goal</button>
+                </form>
+
+                <p id="goal-message"></p>
+
+            </div>
+
         </div>
     </div>
 
