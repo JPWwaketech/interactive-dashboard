@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <title>My Interactive Dashboard</title>
 
+    <!-- Bootstrap CSS should come FIRST -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
 
+    <!-- Your custom CSS must come AFTER Bootstrap -->
+    <style>
         body {
             background-color: #f0f8ff;
             font-family: Arial, Helvetica, sans-serif;
@@ -15,14 +22,15 @@
         }
     </style>
 
-  
+    <!-- JavaScript should come after CSS -->
     <script defer>
         window.alert("The JavaScript code is working!");
     </script>
 
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,12 +42,11 @@
         document.write("This dashboard demonstrates how JavaScript can be used to create interactive websites.");
     </script>
 
-   
     <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
 
     <div class="container">
         <div class="row">
-          
+            <!-- Future content goes here -->
         </div>
     </div>
 
