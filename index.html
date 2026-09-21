@@ -84,6 +84,55 @@
 
         </div>
     </div>
+    <script> 
+        // Metric Converter Tool
+
+// Ask the user for a numeric value
+document.write("Enter a numeric value to convert: ");
+var value = parseFloat(prompt("Enter a numeric value to convert:"));
+
+// Display conversion options
+document.write("<br>Select a conversion type:<br>");
+document.write("1 = inch to centimeter<br>");
+document.write("2 = foot to centimeter<br>");
+document.write("3 = yard to meter<br>");
+document.write("4 = mile to kilometer<br>");
+document.write("5 = centimeter to inch<br>");
+document.write("6 = centimeter to foot<br>");
+document.write("7 = meter to yard<br>");
+document.write("8 = kilometer to mile<br>");
+
+var choice = parseInt(prompt("Enter the number for conversion type:"));
+var result;
+
+if (choice === 1) {
+  result = value * 2.54;
+  document.write("Result in centimeters: " + result);
+} else if (choice === 2) {
+  result = value * 30.48;
+  document.write("Result in centimeters: " + result);
+} else if (choice === 3) {
+  result = value * 0.91;
+  document.write("Result in meters: " + result);
+} else if (choice === 4) {
+  result = value * 1.61;
+  document.write("Result in kilometers: " + result);
+} else if (choice === 5) {
+  result = value * 0.39;
+  document.write("Result in inches: " + result);
+} else if (choice === 6) {
+  result = value * 0.0328;
+  document.write("Result in feet: " + result);
+} else if (choice === 7) {
+  result = value * 1.09;
+  document.write("Result in yards: " + result);
+} else if (choice === 8) {
+  result = value * 0.62;
+  document.write("Result in miles: " + result);
+} else {
+  document.write("Invalid selection. Please try again.");
+}
+    </script>
   <script src="task-manager.js"></script>
 </body>
 </html>
