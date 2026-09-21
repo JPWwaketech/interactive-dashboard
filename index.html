@@ -19,21 +19,21 @@
             color: #003366;
         }
 
-        #weekly-tasks {
+        #weekly-tasks, #metric-converter {
             background: #eef6ff;
             padding: 20px;
             border-radius: 8px;
             margin-top: 20px;
         }
 
-        #weekly-tasks input {
+        #weekly-tasks input, #metric-converter input, #metric-converter select {
             margin-bottom: 10px;
             padding: 8px;
             border-radius: 4px;
             border: 1px solid #ccc;
         }
 
-        #goal-btn {
+        #goal-btn, #convert-btn {
             padding: 10px;
             background: #003366;
             color: white;
@@ -42,11 +42,11 @@
             cursor: pointer;
         }
 
-        #goal-btn:hover {
+        #goal-btn:hover, #convert-btn:hover {
             background: #001f40;
         }
 
-        #goal-message {
+        #goal-message, #output {
             margin-top: 15px;
             font-weight: bold;
         }
@@ -67,9 +67,8 @@
     <div class="container">
         <div class="row">
 
+            <!-- Weekly Task Calculator -->
             <div class="col" id="weekly-tasks">
-
-            
                 <form id="task-form">
                     <input type="text" id="user-name" placeholder="Enter your name" required>
                     <input type="number" id="daily-goal" placeholder="Daily Task Goal" required>
@@ -79,60 +78,37 @@
                 </form>
 
                 <p id="goal-message"></p>
+            </div>
 
+            <!-- Metric Converter Section -->
+            <div class="col" id="metric-converter">
+                <h2>Imperial / Metric Converter</h2>
+
+                <form id="converter-form">
+                    <input type="number" id="input-value" placeholder="Enter value" required>
+
+                    <select id="conversion-type">
+                        <option value="in-to-cm">Inches → Centimeters</option>
+                        <option value="ft-to-cm">Feet → Centimeters</option>
+                        <option value="yd-to-m">Yards → Meters</option>
+                        <option value="mi-to-km">Miles → Kilometers</option>
+                        <option value="cm-to-in">Centimeters → Inches</option>
+                        <option value="cm-to-ft">Centimeters → Feet</option>
+                        <option value="m-to-yd">Meters → Yards</option>
+                        <option value="km-to-mi">Kilometers → Miles</option>
+                    </select>
+
+                    <button id="convert-btn">Convert</button>
+                </form>
+
+                <p id="output"></p>
+
+                <script src="metric-converter.js" defer></script>
             </div>
 
         </div>
     </div>
-    <script> 
-        // Metric Converter Tool
 
-// Ask the user for a numeric value
-document.write("Enter a numeric value to convert: ");
-var value = parseFloat(prompt("Enter a numeric value to convert:"));
-
-// Display conversion options
-document.write("<br>Select a conversion type:<br>");
-document.write("1 = inch to centimeter<br>");
-document.write("2 = foot to centimeter<br>");
-document.write("3 = yard to meter<br>");
-document.write("4 = mile to kilometer<br>");
-document.write("5 = centimeter to inch<br>");
-document.write("6 = centimeter to foot<br>");
-document.write("7 = meter to yard<br>");
-document.write("8 = kilometer to mile<br>");
-
-var choice = parseInt(prompt("Enter the number for conversion type:"));
-var result;
-
-if (choice === 1) {
-  result = value * 2.54;
-  document.write("Result in centimeters: " + result);
-} else if (choice === 2) {
-  result = value * 30.48;
-  document.write("Result in centimeters: " + result);
-} else if (choice === 3) {
-  result = value * 0.91;
-  document.write("Result in meters: " + result);
-} else if (choice === 4) {
-  result = value * 1.61;
-  document.write("Result in kilometers: " + result);
-} else if (choice === 5) {
-  result = value * 0.39;
-  document.write("Result in inches: " + result);
-} else if (choice === 6) {
-  result = value * 0.0328;
-  document.write("Result in feet: " + result);
-} else if (choice === 7) {
-  result = value * 1.09;
-  document.write("Result in yards: " + result);
-} else if (choice === 8) {
-  result = value * 0.62;
-  document.write("Result in miles: " + result);
-} else {
-  document.write("Invalid selection. Please try again.");
-}
-    </script>
-  <script src="task-manager.js"></script>
+    <script src="task-manager.js"></script>
 </body>
 </html>
