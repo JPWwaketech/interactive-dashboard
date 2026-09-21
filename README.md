@@ -8,7 +8,7 @@
 ## Weekly Task Goals
 The Weekly Task Goal feature allows users to calculate how many tasks they should aim to complete each week based on their daily productivity goals and any additional bonus tasks they want to include. After entering their name, daily task target, and weekly bonus tasks, the dashboard displays a personalized weekly total. 
 ## Metric Converter 
-
+This tool converts between common Imperial and Metric units, including inches, feet, yards, miles, centimeters, meters, and kilometers. Users can enter a numeric value, choose a conversion type, and receive the converted result instantly.
 ### Logic and Pseudocode
 BEGIN
 
