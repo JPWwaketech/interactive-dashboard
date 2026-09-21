@@ -7,7 +7,9 @@
 - [x] Add a weekly task goal calculator
 ## Weekly Task Goals
 The Weekly Task Goal feature allows users to calculate how many tasks they should aim to complete each week based on their daily productivity goals and any additional bonus tasks they want to include. After entering their name, daily task target, and weekly bonus tasks, the dashboard displays a personalized weekly total. 
-## Metric Converter Pseudocode
+## Metric Converter 
+
+### Logic and Pseudocode
 BEGIN
 
     DISPLAY "Enter a numeric value to convert:"
