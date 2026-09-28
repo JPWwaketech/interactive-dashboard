@@ -64,3 +64,5 @@ BEGIN
     END IF
 
 END
+## Magic Eight Ball
+This feature adds a fun interactive Magic Eight Ball to the dashboard. Users can type a yes/no question and click the Eight Ball image to receive a randomly generated answer. 
