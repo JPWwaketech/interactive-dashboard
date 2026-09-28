@@ -1,34 +1,49 @@
-
 let answers = [
-    "It is certain.",
-    "Ask again later.",
-    "My sources say no.",
-    "Definitely yes!",
-    "I wouldn't count on it.",
-    "The future is unclear."
-];
+    'Seems unlikely.',
+    'No way.',
+    'Ask again later.',
+    'Signs point to yes.',
+    'No.',
+    'Yes.',
+    'Uncertain.'
+]
+ 
+let question = document.getElementById("question");
+let ball = document.getElementById("ball");
+let reset = document.getElementById("reset");
+let circle = document.getElementById("circle" );
+ 
 
+ball.addEventListener('mousedown', () => {
+    if(question.value == '') {
+        alert("Please enter a question!");
+    }
+    else {
+        displayAnswer();
+    }
+})
+ 
+
+reset.addEventListener('click', () => {
+    circle.style.display = 'none'; 
+})
+ 
 
 function displayAnswer() {
     let index = Math.floor(Math.random() * answers.length);
-    let circle = document.getElementById("circle");
-
-    circle.style.display = "block";     
-    circle.innerHTML = answers[index];  
+    let answer = answers[index];
+    circle.style.display = 'inline-block';
+    circle.innerHTML = '<br><br><br>' + answer  ;
 }
+ 
 
-
-document.getElementById("ball").addEventListener("mousedown", function() {
-    let question = document.getElementById("question").value;
-
-    if (question.trim() === "") {
-        alert("Please enter a yes/no question first!");
-    } else {
-        displayAnswer();
+let addResponse = document.getElementById("addResponse");
+ 
+addResponse.addEventListener('click', () => {
+    let newResponse = prompt("Enter a new 8-ball response:");
+    if(newResponse) {
+        answers.push(newResponse);
+        console.log("New response added: " + newResponse);
+        console.log("There is a total of: " + answers.length + " responses.");
     }
-});
-
-
-document.getElementById("reset").addEventListener("click", function() {
-    document.getElementById("circle").style.display = "none";
 });
