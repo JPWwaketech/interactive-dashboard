@@ -35,15 +35,4 @@ function displayAnswer() {
     circle.style.display = 'inline-block';
     circle.innerHTML = '<br><br><br>' + answer  ;
 }
- 
-
-let addResponse = document.getElementById("addResponse");
- 
-addResponse.addEventListener('click', () => {
-    let newResponse = prompt("Enter a new 8-ball response:");
-    if(newResponse) {
-        answers.push(newResponse);
-        console.log("New response added: " + newResponse);
-        console.log("There is a total of: " + answers.length + " responses.");
-    }
 });
