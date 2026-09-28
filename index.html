@@ -67,7 +67,6 @@
     <div class="container">
         <div class="row">
 
-            <!-- Weekly Task Calculator -->
             <div class="col" id="weekly-tasks">
                 <form id="task-form">
                     <input type="text" id="user-name" placeholder="Enter your name" required>
@@ -80,7 +79,6 @@
                 <p id="goal-message"></p>
             </div>
 
-            <!-- Metric Converter Section -->
             <div class="col" id="metric-converter">
                 <h2>Imperial / Metric Converter</h2>
 
@@ -105,7 +103,28 @@
 
                 <script src="metric-converter.js" defer></script>
             </div>
+            
+<div class="col" id="magic-eight-ball">
+    <script src="magic-eight-ball.js" defer></script>
+    <link rel="stylesheet" href="css/magic-eight-ball.css">
 
+    <h2 class="heading">Magic Eight Ball</h2>
+
+    <form>
+        <p>Type a yes/no question below, then click on the Eight Ball to get your answer!</p>
+
+        <input id="question" name="question" size="80">
+
+        <div id="magicEightBall">
+            <div id="circle" style="display:none;"></div>
+            <img id="ball" src="img/magic-eight-ball.png" alt="Magic Eight Ball">
+        </div>
+
+        <button id="reset" name="reset" type="reset">Ask another question</button>
+    </form>
+
+    <br>
+</div>
         </div>
     </div>
 
