@@ -1,4 +1,3 @@
-
 function weeklyGoal(userName, dailyGoal, bonusTasks) {
 
     let weeklyGoal = dailyGoal * 5;
@@ -40,8 +39,9 @@ addTaskBtn.addEventListener("click", function () {
 
     if (taskText === "") return; 
 
+   
     myTasks.push(taskText);
-
+    
     const newTaskItem = document.createElement("li");
     newTaskItem.textContent = taskText;
 
