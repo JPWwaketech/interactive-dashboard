@@ -67,8 +67,10 @@
     <div class="container">
         <div class="row">
 
+            <!-- WEEKLY TASKS COLUMN -->
             <div class="col" id="weekly-tasks">
 
+                <!-- Weekly Goal Calculator -->
                 <form id="task-form">
                     <input type="text" id="user-name" placeholder="Enter your name" required>
                     <input type="number" id="daily-goal" placeholder="Daily Task Goal" required>
@@ -78,7 +80,8 @@
                 </form>
 
                 <p id="goal-message"></p>
-                
+
+                <!-- REQUIRED TASK MANAGER UI -->
                 <div id="task-list">
                     <h3>Weekly Task List</h3>
                     <p>Enter a task below to manage your goals.</p>
@@ -93,6 +96,7 @@
 
             </div>
 
+            <!-- METRIC CONVERTER COLUMN -->
             <div class="col" id="metric-converter">
                 <h2>Imperial / Metric Converter</h2>
 
@@ -117,9 +121,9 @@
 
                 <script src="metric-converter.js" defer></script>
             </div>
-            
+
+            <!-- MAGIC EIGHT BALL COLUMN -->
             <div class="col" id="magic-eight-ball">
-                <script src="magic-eight-ball.js" defer></script>
                 <link rel="stylesheet" href="css/magic-eight-ball.css">
 
                 <h2 class="heading">Magic Eight Ball</h2>
@@ -137,6 +141,7 @@
                     <button id="reset" name="reset" type="reset">Ask another question</button>
                 </form>
 
+                <script src="magic-eight-ball.js" defer></script>
                 <br>
             </div>
 
