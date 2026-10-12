@@ -68,7 +68,6 @@
         <div class="row">
 
             <div class="col" id="weekly-tasks">
-
                 <form id="task-form">
                     <input type="text" id="user-name" placeholder="Enter your name" required>
                     <input type="number" id="daily-goal" placeholder="Daily Task Goal" required>
@@ -78,19 +77,6 @@
                 </form>
 
                 <p id="goal-message"></p>
-                
-                <div id="task-list">
-                    <h3>Weekly Task List</h3>
-                    <p>Enter a task below to manage your goals.</p>
-
-                    <form>
-                        <label for="task-name">Enter task:</label>
-                        <input type="text" id="task-name">
-                    </form>
-
-                    <button id="add-task">Add Task</button>
-                </div>
-
             </div>
 
             <div class="col" id="metric-converter">
@@ -118,28 +104,27 @@
                 <script src="metric-converter.js" defer></script>
             </div>
             
-            <div class="col" id="magic-eight-ball">
-                <script src="magic-eight-ball.js" defer></script>
-                <link rel="stylesheet" href="css/magic-eight-ball.css">
+<div class="col" id="magic-eight-ball">
+    <script src="magic-eight-ball.js" defer></script>
+    <link rel="stylesheet" href="css/magic-eight-ball.css">
 
-                <h2 class="heading">Magic Eight Ball</h2>
+    <h2 class="heading">Magic Eight Ball</h2>
 
-                <form>
-                    <p>Type a yes/no question below, then click on the Eight Ball to get your answer!</p>
+    <form>
+        <p>Type a yes/no question below, then click on the Eight Ball to get your answer!</p>
 
-                    <input id="question" name="question" size="80">
+        <input id="question" name="question" size="80">
 
-                    <div id="magicEightBall">
-                        <div id="circle" style="display:none;"></div>
-                        <img id="ball" src="magic-eight-ball.png" alt="Magic Eight Ball">
-                    </div>
+        <div id="magicEightBall">
+            <div id="circle" style="display:none;"></div>
+            <img id="ball" src="magic-eight-ball.png" alt="Magic Eight Ball">
+        </div>
 
-                    <button id="reset" name="reset" type="reset">Ask another question</button>
-                </form>
+        <button id="reset" name="reset" type="reset">Ask another question</button>
+    </form>
 
-                <br>
-            </div>
-
+    <br>
+</div>
         </div>
     </div>
 
