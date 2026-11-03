@@ -11,6 +11,10 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css/magic-eight-ball.css">
+
+    <link rel="stylesheet" href="css/digital-clock.css">
+
     <style>
         body {
             background-color: #f0f8ff;
@@ -24,7 +28,8 @@
 
         #weekly-tasks,
         #metric-converter,
-        #magic-eight-ball {
+        #magic-eight-ball,
+        #digital-clock {
             background: #eef6ff;
             padding: 20px;
             border-radius: 8px;
@@ -134,7 +139,6 @@
 
                 <hr>
 
-<!-- UI in HTML with JS generated UL and task logic --> 
                 <div id="task-list">
 
                     <h3>Task Manager</h3>
@@ -214,8 +218,6 @@
 
             <div class="col" id="magic-eight-ball">
 
-                css/magic-eight-ball.css
-
                 <h2 class="heading">
                     Magic Eight Ball
                 </h2>
@@ -254,11 +256,22 @@
 
             </div>
 
+            <div class="col" id="digital-clock">
+
+                <h3>Current Time & Date</h3>
+
+                <div id="clock-face"></div>
+
+                <p id="calendar-date"></p>
+
+            </div>
+
         </div>
 
     </div>
 
     <script src="task-manager.js"></script>
+    <script src="js/digital-clock.js" defer></script>
 
 </body>
 </html>
