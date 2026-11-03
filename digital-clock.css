@@ -1,4 +1,8 @@
 #digital-clock {
+    background-color: #eef6ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -10,5 +14,5 @@
 
 #calendar-date {
     font-size: 1.2rem;
-    color: #555;
+    color: #555555;
 }
